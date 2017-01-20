@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>West Coast Tuition</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FONT AWESOME CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- FLEXSLIDER CSS -->
+    <link href="assets/css/flexslider.css" rel="stylesheet"/>
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <!-- Google	Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'/>
+    <script src="assets/js/snap.svg-min.js" ></script>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="logo-custom" src="assets/img/logo180-50.png" alt=""/></a>
+        </div>
+        <div class="navbar-collapse collapse move-me">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#features-sec">WHAT WE DO</a></li>
+                <li><a href="#faculty-sec">ABOUT US</a></li>
+                <li><a href="#course-sec">FAQ</a></li>
+                <li><a href="#contact-sec">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--NAVBAR SECTION END-->
+<div class="home-sec" id="home">
+    <div class="overlay">
+        <div class="container">
+            <div class="row text-center ">
+
+                <div class="col-lg-12  col-md-12 col-sm-12">
+
+                    <div id="main-section" >
+                        <div id="logo-animation" style="max-width:800px;margin: 0 auto">
+                            <svg id="logo-animation-svg" style="width:100%;height:100%">
+                            </svg>
+                            <script type="application/javascript">
+                                var s = Snap("#logo-animation-svg");
+                                s.attr({ viewBox: "0 0 1000 315" });
+                                var circleArr = [];
+                                var lineArr = [];
+                                var shadowArr = [];
+                                var r = 50;
+                                var line;
+                                for (var i = 0; i< 4; i++) {
+                                    var x = 350 + i*r*2;
+                                    line = s.line(x,10,x,210);
+                                    line.attr({
+                                        strokeWidth:5,
+                                        stroke:"white"
+                                    });
+                                    var myCircle = s.circle(x, 250, r);
+                                    myCircle.attr({
+                                        fill: '#2291ea',
+                                        strokeWidth:0
+                                    });
+                                    var shadow = s.ellipse(x , 310, r-10, 5);
+                                    shadow.attr({
+                                        strokeWidth:0,
+                                        fill:"black"
+                                    });
+                                    circleArr.push(myCircle);
+                                    lineArr.push(line);
+                                    shadowArr.push(shadow);
+                                }
+
+                                function swingRight() {
+                                    circleArr[3].animate({ transform: "r-40," + 650 + ',' + 10}, 800, mina["easein"]);
+                                    lineArr[3].animate({ transform: "r-40," + 650 + ',' + 10}, 800, mina["easein"]);
+                                    shadowArr[3].animate({ transform: "t155,0s"}, 800, mina["easein"]);
+                                    setTimeout(centreRight, 900);
+                                }
+
+                                function centreRight() {
+                                    circleArr[3].animate({ transform: "r0," + 650 + ',' + 10}, 800, mina["easeout"]);
+                                    lineArr[3].animate({ transform: "r0," + 650 + ',' + 10}, 800, mina["easeout"]);
+                                    shadowArr[3].animate({ transform: "t0,0s"}, 800, mina["easeout"]);
+                                    setTimeout(swingLeft, 800);
+                                }
+
+                                function swingLeft() {
+                                    circleArr[0].animate({ transform: "r40," + 350 + ',' + 10}, 800, mina["easein"]);
+                                    lineArr[0].animate({ transform: "r40," + 350 + ',' + 10}, 800, mina["easein"]);
+                                    shadowArr[0].animate({ transform: "t-155,0s"}, 800, mina["easein"]);
+                                    setTimeout(centreLeft, 900);
+                                }
+
+                                function centreLeft() {
+                                    circleArr[0].animate({ transform: "r0," + 350 + ',' + 10}, 800, mina["easeout"]);
+                                    lineArr[0].animate({ transform: "r0," + 350 + ',' + 10}, 800, mina["easeout"]);
+                                    shadowArr[0].animate({ transform: "t0,0s"}, 800, mina["easeout"]);
+
+                                    setTimeout(swingRight, 800);
+                                }
+                                swingRight();
+
+                            </script>
+                        </div>
+                        <h1>West Coast Tuition</h1>
+                    </div>
+
+                    <!--<div class="flexslider set-flexi" id="main-section">-->
+                        <!--<ul class="slides move-me">-->
+                            <!--&lt;!&ndash; Slider 01 &ndash;&gt;-->
+                            <!--<li>-->
+                                <!--<h3>Delivering Quality Education</h3>-->
+                                <!--<h1>THE UNIQUE METHOD</h1>-->
+                                <!--<a href="#features-sec" class="btn btn-info btn-lg">-->
+                                    <!--GET AWESOME-->
+                                <!--</a>-->
+                                <!--<a href="#features-sec" class="btn btn-success btn-lg">-->
+                                    <!--FEATURE LIST-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash; End Slider 01 &ndash;&gt;-->
+
+                            <!--&lt;!&ndash; Slider 02 &ndash;&gt;-->
+                            <!--<li>-->
+                                <!--<h3>Delivering Quality Education</h3>-->
+                                <!--<h1>UNMATCHED APPROACH</h1>-->
+                                <!--<a href="#features-sec" class="btn btn-primary btn-lg">-->
+                                    <!--GET AWESOME-->
+                                <!--</a>-->
+                                <!--<a href="#features-sec" class="btn btn-danger btn-lg">-->
+                                    <!--FEATURE LIST-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash; End Slider 02 &ndash;&gt;-->
+
+                            <!--&lt;!&ndash; Slider 03 &ndash;&gt;-->
+                            <!--<li>-->
+                                <!--<h3>Delivering Quality Education</h3>-->
+                                <!--<h1>AWESOME FACULTY PANEL</h1>-->
+                                <!--<a href="#features-sec" class="btn btn-default btn-lg">-->
+                                    <!--GET AWESOME-->
+                                <!--</a>-->
+                                <!--<a href="#features-sec" class="btn btn-info btn-lg">-->
+                                    <!--FEATURE LIST-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash; End Slider 03 &ndash;&gt;-->
+                        <!--</ul>-->
+                    <!--</div>-->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--HOME SECTION END-->
+<div class="tag-line">
+    <div class="container">
+        <div class="row  text-center">
+
+            <div class="col-lg-12  col-md-12 col-sm-12">
+
+                <h2 data-scroll-reveal="enter from the bottom after 0.1s">
+                    <i class="fa fa-circle-o-notch"></i>
+                        MAXIMISE YOUR ACADEMICAL POTENTIAL
+                    <i class="fa fa-circle-o-notch"></i>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--HOME SECTION TAG LINE END-->
+<div id="features-sec" class="container set-pad">
+    <div class="row text-center">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+            <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">WHAT WE DO</h1>
+            <p data-scroll-reveal="enter from the bottom after 0.3s">
+                We provide in-home tutoring services for high school students all over Perth.
+                Our tutors can help students study for exams, understand the challenging concepts they are struggling with,
+                help prepare for that tricky essay, or simply help with daily homework.
+
+            </p>
+        </div>
+
+    </div>
+    <!--/.HEADER LINE END-->
+
+
+    <div class="row">
+
+
+        <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+            <div class="about-div">
+                <i class="fa fa-graduation-cap fa-4x icon-round-border " style="text-align: center!important"></i>
+                <h3>The Best Tutors</h3>
+                <hr/>
+                <hr/>
+                <p>
+                    We hand-pick top graduates to share their own personal insights, tips and tricks for
+                    studying smart and achieving success at school.
+
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+            <div class="about-div">
+                <i class="fa fa-home fa-4x icon-round-border"></i>
+                <h3>IN YOUR HOME</h3>
+                <hr/>
+                <hr/>
+                <p>
+                    Our tutors come to you, meaning a comfortable study environment and no after school driving.
+
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+            <div class="about-div">
+                <i class="fa fa-pencil fa-4x icon-round-border"></i>
+                <h3>ONE ON ONE SESSIONS</h3>
+                <hr/>
+                <hr/>
+                <p>
+                    Some students find it hard to learn in a school environment, one-on-one sessions with
+                    an excellent tutor could be the change they need.
+
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- FEATURES SECTION END-->
+<div id="faculty-sec" class="faculty-sec">
+    <div class="overlay">
+        <div class="container set-pad">
+            <div class="row text-center">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                    <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">ABOUT US</h1>
+                    <p data-scroll-reveal="enter from the bottom after 0.3s">
+                        We started West Coast Tuition in 2014 after individually tutoring for three years.
+                        With nearly a hundred students between us, we saw a need to pass on the specific study skills we
+                        developed during our time at school.<br/>
+                        We've slowly hand picked successful students to join our team and now have more than ten tutors North of the river.
+                    </p>
+                </div>
+
+            </div>
+            <!--/.HEADER LINE END-->
+
+            <div class="row">
+
+
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                    <div class="faculty-div">
+                        <img src="assets/img/faculty/ivan.png" class="img-rounded" style="width:250px;height:250px;"/>
+                        <h3>Ivan</h3>
+                        <hr/>
+                        <p>
+                            Completed a Master's of Engineering at The University of Western Australia
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                    <div class="faculty-div">
+                        <img src="assets/img/faculty/lester.png" class="img-rounded" style="width:250px;height:250px;"/>
+                        <h3>Lester</h3>
+                        <hr/>
+                        <p>
+                            Studying a Master's of Engineering at The University of Western Australia
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                    <div class="faculty-div">
+                        <img src="assets/img/faculty/nathan.png" class="img-rounded" style="width:250px;height:250px;"/>
+                        <h3>Nathan</h3>
+                        <hr/>
+                        <p>
+                            Studying a Master's of Engineering at The University of Western Australia
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FACULTY SECTION END-->
+<div id="course-sec" class="container set-pad">
+    <div class="row text-center">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+            <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">COMMON QUESTIONS</h1>
+            <p data-scroll-reveal="enter from the bottom after 0.3s">
+
+            </p>
+        </div>
+
+    </div>
+    <!--/.HEADER LINE END-->
+
+
+    <div class="row set-row-pad">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.1s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
+                                <strong>Q.</strong> What happens if I don't get along with my tutor?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                Everyone learns in different ways and sometimes a tutor might not be the right fit.
+                                Our tutors understand this and we are more than happy to trial different tutors until
+                                we find the right fit for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.2s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+                                <strong>Q.</strong> Is tutoring worthwhile?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                Tutoring entails more than just helping students with their homework.
+                                For that reason, tutoring is definitely worthwhile! Tuition services can
+                                help a student grow in confidence in their own ability, whilst having the
+                                available support and advice to help clear up any difficulties the student
+                                may be experiencing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.3s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+                                <strong>Q.</strong> Why West Coast Tuition?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                West Coast Tuition tutors are hand-picked based on their own achievements at school
+                                and are all very experienced with helping high school students in their academic
+                                challenges. The large majority of our tutors scored subject prizes and attained an ATAR
+                                of above 99. We are reliable and approachable tutors that are prepared for every upcoming
+                                session. We draw on our own challenges from high school and learning methods
+                                that we incorporated to help each student maximise their academic potential.<br/>
+                                Additionally, if your regular tutor is unavailable, we can easily find a replacement to
+                                ensure you don't miss out on the crucial help you need the night before a test!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.4s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed">
+                                <strong>Q.</strong> Can we have one trial session before we commit?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                <strong>Of course!</strong> We encourage every student to have a 'trial' session to see if they benefit
+                                from our services. We do not expect any further commitments and understand if students
+                                do not feel comfortable for any particular reason. Furthermore, students may only want
+                                help before an assessment and that is ok with us too.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.5s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed">
+                                <strong>Q.</strong> Can we cancel a session if we're busy?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                Yes, we ask that you give the tutor at least 24 hours notice so they can rearrange their schedule.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.6s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="collapsed">
+                                <strong>Q.</strong> How do we contact the tutor?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                Once you're happy with the tutor you've been allocated, we encourage all weekly communication to be with
+                                the tutor directly. They will contact you prior to your first session and give you their
+                                contact details. You are also welcome to contact any of the management team for any reason.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.7s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" class="collapsed">
+                                <strong>Q.</strong> How do we pay for sessions?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                Once you begin having sessions a monthly invoice will be sent to your email address with
+                                directions on how to pay via bank transfer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- COURSES SECTION END-->
+<div id="contact-sec">
+    <div class="overlay">
+        <div class="container set-pad">
+            <div class="row text-center">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                    <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">CONTACT US </h1>
+                    <p data-scroll-reveal="enter from the bottom after 0.2s">
+                        Call Lester on <strong>0466 232 624</strong><br/>
+                        Email us directly at <strong>westcoasttuition@gmail.com</strong><br/>
+                        Or use this!
+                    </p>
+                </div>
+
+            </div>
+            <!--/.HEADER LINE END-->
+            <div class="row set-row-pad" data-scroll-reveal="enter from the bottom after 0.3s">
+
+
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control " required="required" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control " required="required" placeholder="Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" required="required" class="form-control" style="min-height: 150px;"
+                                      placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+                        </div>
+                    </form>
+
+                    <script>
+
+                        var apiKey = "AIzaSyAECNXIH7PO3DItJsy-em7-Od7uRKPukl8";
+                        var clientId = 'xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com';
+                        var scopes =
+                            'https://www.googleapis.com/auth/gmail.readonly '+
+                            'https://www.googleapis.com/auth/gmail.send';
+
+                        function handleClientLoad() {
+                            gapi.client.setApiKey(apiKey);
+                            window.setTimeout(checkAuth, 1);
+                        }
+                        function checkAuth() {
+                            gapi.auth.authorize({
+                                client_id: clientId,
+                                scope: scopes,
+                                immediate: true
+                            }, handleAuthResult);
+                        }
+                        function handleAuthClick() {
+                            gapi.auth.authorize({
+                                client_id: clientId,
+                                scope: scopes,
+                                immediate: false
+                            }, handleAuthResult);
+                            return false;
+                        }
+                        function handleAuthResult(authResult) {
+                            if(authResult && !authResult.error) {
+                                loadGmailApi();
+                                $('#authorize-button').remove();
+                                $('.table-inbox').removeClass("hidden");
+                                $('#compose-button').removeClass("hidden");
+                            } else {
+                                $('#authorize-button').removeClass("hidden");
+                                $('#authorize-button').on('click', function(){
+                                    handleAuthClick();
+                                });
+                            }
+                        }
+                        function loadGmailApi() {
+                            gapi.client.load('gmail', 'v1', displayInbox);
+                        }
+                        function sendEmail()
+                        {
+                            $('#send-button').addClass('disabled');
+                            sendMessage(
+                                {
+                                    'To': $('#compose-to').val(),
+                                    'Subject': $('#compose-subject').val()
+                                },
+                                $('#compose-message').val(),
+                                composeTidy
+                            );
+                            return false;
+                        }
+                        function composeTidy()
+                        {
+                            $('#compose-modal').modal('hide');
+                            $('#compose-to').val('');
+                            $('#compose-subject').val('');
+                            $('#compose-message').val('');
+                            $('#send-button').removeClass('disabled');
+                        }
+                        function sendMessage(headers_obj, message, callback)
+                        {
+                            var email = '';
+                            for(var header in headers_obj)
+                                email += header += ": "+headers_obj[header]+"\r\n";
+                            email += "\r\n" + message;
+                            var sendRequest = gapi.client.gmail.users.messages.send({
+                                'userId': 'me',
+                                'resource': {
+                                    'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
+                                }
+                            });
+                            return sendRequest.execute(callback);
+                        }
+                    </script>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- CONTACT SECTION END-->
+<div id="footer" class="footer">
+    <a href="https://www.facebook.com/westcoasttuition" style="margin-right:10px">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    |  &copy westcoasttuition.com.au
+</div>
+<!-- FOOTER SECTION END-->
+
+<!--  Jquery Core Script -->
+<script src="assets/js/jquery-1.10.2.js"></script>
+<!--  Core Bootstrap Script -->
+<script src="assets/js/bootstrap.js"></script>
+<!--  Flexslider Scripts -->
+<script src="assets/js/jquery.flexslider.js"></script>
+<!--  Scrolling Reveal Script -->
+<script src="assets/js/scrollReveal.js"></script>
+<!--  Scroll Scripts -->
+<script src="assets/js/jquery.easing.min.js"></script>
+<!--  Custom Scripts -->
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

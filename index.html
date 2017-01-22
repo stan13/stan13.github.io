@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img class="logo-custom" src="assets/img/logo180-50.png" alt=""/></a>
+            <a class="navbar-brand" href="#"></a>
         </div>
         <div class="navbar-collapse collapse move-me">
             <ul class="nav navbar-nav navbar-right">
@@ -59,6 +59,7 @@
                                 var circleArr = [];
                                 var lineArr = [];
                                 var shadowArr = [];
+                                var highlightArr = [];
                                 var r = 50;
                                 var line;
                                 for (var i = 0; i< 4; i++) {
@@ -78,15 +79,22 @@
                                         strokeWidth:0,
                                         fill:"black"
                                     });
+                                    var highlight = s.ellipse(x, 215, 22, 10);
+                                    highlight.attr({
+                                        strokeWidth:0,
+                                        fill: "rgba(255,255,255,0.3)"
+                                    });
                                     circleArr.push(myCircle);
                                     lineArr.push(line);
                                     shadowArr.push(shadow);
+                                    highlightArr.push(highlight);
                                 }
 
                                 function swingRight() {
                                     circleArr[3].animate({ transform: "r-40," + 650 + ',' + 10}, 800, mina["easein"]);
                                     lineArr[3].animate({ transform: "r-40," + 650 + ',' + 10}, 800, mina["easein"]);
                                     shadowArr[3].animate({ transform: "t155,0s"}, 800, mina["easein"]);
+                                    highlightArr[3].animate({ transform: "r-40," + 650 + ',' + 10 + " r40, t22,-7"}, 800, mina["easein"]);
                                     setTimeout(centreRight, 900);
                                 }
 
@@ -94,6 +102,7 @@
                                     circleArr[3].animate({ transform: "r0," + 650 + ',' + 10}, 800, mina["easeout"]);
                                     lineArr[3].animate({ transform: "r0," + 650 + ',' + 10}, 800, mina["easeout"]);
                                     shadowArr[3].animate({ transform: "t0,0s"}, 800, mina["easeout"]);
+                                    highlightArr[3].animate({ transform: "r0," + 650 + ',' + 10}, 800, mina["easeout"]);
                                     setTimeout(swingLeft, 800);
                                 }
 
@@ -101,6 +110,7 @@
                                     circleArr[0].animate({ transform: "r40," + 350 + ',' + 10}, 800, mina["easein"]);
                                     lineArr[0].animate({ transform: "r40," + 350 + ',' + 10}, 800, mina["easein"]);
                                     shadowArr[0].animate({ transform: "t-155,0s"}, 800, mina["easein"]);
+                                    highlightArr[0].animate({ transform: "r40," + 350 + ',' + 10 + " r-40, t-22,-7"}, 800, mina["easein"]);
                                     setTimeout(centreLeft, 900);
                                 }
 
@@ -108,7 +118,7 @@
                                     circleArr[0].animate({ transform: "r0," + 350 + ',' + 10}, 800, mina["easeout"]);
                                     lineArr[0].animate({ transform: "r0," + 350 + ',' + 10}, 800, mina["easeout"]);
                                     shadowArr[0].animate({ transform: "t0,0s"}, 800, mina["easeout"]);
-
+                                    highlightArr[0].animate({ transform: "r0," + 350 + ',' + 10}, 800, mina["easeout"]);
                                     setTimeout(swingRight, 800);
                                 }
                                 swingRight();
@@ -118,6 +128,7 @@
                         <h1>West Coast Tuition</h1>
                     </div>
 
+                    <!--Carousel Style scroll-->
                     <!--<div class="flexslider set-flexi" id="main-section">-->
                         <!--<ul class="slides move-me">-->
                             <!--&lt;!&ndash; Slider 01 &ndash;&gt;-->
@@ -163,7 +174,6 @@
 
 
                 </div>
-
             </div>
         </div>
     </div>
@@ -177,9 +187,9 @@
             <div class="col-lg-12  col-md-12 col-sm-12">
 
                 <h2 data-scroll-reveal="enter from the bottom after 0.1s">
-                    <i class="fa fa-circle-o-notch"></i>
-                        MAXIMISE YOUR ACADEMICAL POTENTIAL
-                    <i class="fa fa-circle-o-notch"></i>
+                    <i class="fa fa-graduation-cap"></i>
+                        MAXIMISE YOUR ACADEMIC POTENTIAL
+                    <i class="fa fa-graduation-cap"></i>
                 </h2>
             </div>
         </div>
@@ -193,8 +203,8 @@
             <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">WHAT WE DO</h1>
             <p data-scroll-reveal="enter from the bottom after 0.3s">
                 We provide in-home tutoring services for high school students all over Perth.
-                Our tutors can help students study for exams, understand the challenging concepts they are struggling with,
-                help prepare for that tricky essay, or simply help with daily homework.
+                Our tutors can help students study for exams, understand the challenging concepts they are
+                struggling with, prepare for that tricky essay, or simply help with daily homework.
 
             </p>
         </div>
@@ -207,20 +217,20 @@
 
 
         <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
-            <div class="about-div">
+            <div class="about-div text-center">
                 <i class="fa fa-graduation-cap fa-4x icon-round-border " style="text-align: center!important"></i>
                 <h3>The Best Tutors</h3>
                 <hr/>
                 <hr/>
                 <p>
-                    We hand-pick top graduates to share their own personal insights, tips and tricks for
+                    We hand-pick top high school graduates to share their own personal insights, tips and tricks for
                     studying smart and achieving success at school.
 
                 </p>
             </div>
         </div>
         <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
-            <div class="about-div">
+            <div class="about-div text-center">
                 <i class="fa fa-home fa-4x icon-round-border"></i>
                 <h3>IN YOUR HOME</h3>
                 <hr/>
@@ -232,7 +242,7 @@
             </div>
         </div>
         <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
-            <div class="about-div">
+            <div class="about-div text-center">
                 <i class="fa fa-pencil fa-4x icon-round-border"></i>
                 <h3>ONE ON ONE SESSIONS</h3>
                 <hr/>
@@ -259,14 +269,14 @@
                         We started West Coast Tuition in 2014 after individually tutoring for three years.
                         With nearly a hundred students between us, we saw a need to pass on the specific study skills we
                         developed during our time at school.<br/>
-                        We've slowly hand picked successful students to join our team and now have more than ten tutors North of the river.
+                        We've slowly hand-picked successful students to join our team and now have more than ten tutors North of the river.
                     </p>
                 </div>
 
             </div>
             <!--/.HEADER LINE END-->
 
-            <div class="row">
+            <div class="row text-center">
 
 
                 <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
@@ -275,7 +285,7 @@
                         <h3>Ivan</h3>
                         <hr/>
                         <p>
-                            Completed a Master's of Engineering at The University of Western Australia
+                            Completed a Master's of Professional Engineering at The University of Western Australia
 
                         </p>
                     </div>
@@ -286,7 +296,7 @@
                         <h3>Lester</h3>
                         <hr/>
                         <p>
-                            Studying a Master's of Engineering at The University of Western Australia
+                            Studying a Master's of Professional Engineering at The University of Western Australia
 
                         </p>
                     </div>
@@ -297,7 +307,7 @@
                         <h3>Nathan</h3>
                         <hr/>
                         <p>
-                            Studying a Master's of Engineering at The University of Western Australia
+                            Studying a Master's of Professional Engineering at The University of Western Australia
 
                         </p>
                     </div>
@@ -356,7 +366,7 @@
                                 Tutoring entails more than just helping students with their homework.
                                 For that reason, tutoring is definitely worthwhile! Tuition services can
                                 help a student grow in confidence in their own ability, whilst having the
-                                available support and advice to help clear up any difficulties the student
+                                available support and advice to help clear up any difficulties they
                                 may be experiencing.
                             </p>
                         </div>
@@ -455,6 +465,50 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.7s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" class="collapsed">
+                                <strong>Q.</strong> How long does a session go for?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                That's up to you. Normally sessions last for 1 hour but some students may want longer
+                                for multiple subjects or to prepare for an assessment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.7s">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" class="collapsed">
+                                <strong>Q.</strong> What subjects do you offer?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse" style="height: 0px;">
+                        <div class="panel-body">
+                            <p>
+                                We currently have tutors for the following subjects:
+                                <ul>
+                                    <li>Maths (All levels)</li>
+                                    <li>English</li>
+                                    <li>English Literature</li>
+                                    <li>Physics</li>
+                                    <li>Chemistry</li>
+                                    <li>Science</li>
+                                    <li>Music</li>
+                                </ul>
+                                If you need help with a subject thats not on this list send us a request and we'll
+                            find a tutor just for you!
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -470,116 +524,36 @@
                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">CONTACT US </h1>
                     <p data-scroll-reveal="enter from the bottom after 0.2s">
                         Call Lester on <strong>0466 232 624</strong><br/>
-                        Email us directly at <strong>westcoasttuition@gmail.com</strong><br/>
-                        Or use this!
+                        Email us directly at <strong><a href="mailto:westcoasttuition@gmail.com">westcoasttuition@gmail.com</a></strong><br/>
+                        <!--Or use this!-->
                     </p>
                 </div>
 
             </div>
             <!--/.HEADER LINE END-->
-            <div class="row set-row-pad" data-scroll-reveal="enter from the bottom after 0.3s">
+            <!--<div class="row set-row-pad" data-scroll-reveal="enter from the bottom after 0.3s">-->
 
 
-                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control " required="required" placeholder="Your Name"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control " required="required" placeholder="Your Email"/>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" required="required" class="form-control" style="min-height: 150px;"
-                                      placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
-                        </div>
-                    </form>
+                <!--<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">-->
+                    <!--<form onsubmit="mailto:westcoasttuition@gmail.com">-->
+                        <!--<div class="form-group">-->
+                            <!--<input type="text" class="form-control " required="required" placeholder="Your Name"/>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<input type="text" class="form-control " required="required" placeholder="Your Email"/>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<textarea name="message" required="required" class="form-control" style="min-height: 150px;"-->
+                                      <!--placeholder="Message"></textarea>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>-->
+                        <!--</div>-->
+                    <!--</form>-->
 
-                    <script>
+                <!--</div>-->
 
-                        var apiKey = "AIzaSyAECNXIH7PO3DItJsy-em7-Od7uRKPukl8";
-                        var clientId = 'xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com';
-                        var scopes =
-                            'https://www.googleapis.com/auth/gmail.readonly '+
-                            'https://www.googleapis.com/auth/gmail.send';
-
-                        function handleClientLoad() {
-                            gapi.client.setApiKey(apiKey);
-                            window.setTimeout(checkAuth, 1);
-                        }
-                        function checkAuth() {
-                            gapi.auth.authorize({
-                                client_id: clientId,
-                                scope: scopes,
-                                immediate: true
-                            }, handleAuthResult);
-                        }
-                        function handleAuthClick() {
-                            gapi.auth.authorize({
-                                client_id: clientId,
-                                scope: scopes,
-                                immediate: false
-                            }, handleAuthResult);
-                            return false;
-                        }
-                        function handleAuthResult(authResult) {
-                            if(authResult && !authResult.error) {
-                                loadGmailApi();
-                                $('#authorize-button').remove();
-                                $('.table-inbox').removeClass("hidden");
-                                $('#compose-button').removeClass("hidden");
-                            } else {
-                                $('#authorize-button').removeClass("hidden");
-                                $('#authorize-button').on('click', function(){
-                                    handleAuthClick();
-                                });
-                            }
-                        }
-                        function loadGmailApi() {
-                            gapi.client.load('gmail', 'v1', displayInbox);
-                        }
-                        function sendEmail()
-                        {
-                            $('#send-button').addClass('disabled');
-                            sendMessage(
-                                {
-                                    'To': $('#compose-to').val(),
-                                    'Subject': $('#compose-subject').val()
-                                },
-                                $('#compose-message').val(),
-                                composeTidy
-                            );
-                            return false;
-                        }
-                        function composeTidy()
-                        {
-                            $('#compose-modal').modal('hide');
-                            $('#compose-to').val('');
-                            $('#compose-subject').val('');
-                            $('#compose-message').val('');
-                            $('#send-button').removeClass('disabled');
-                        }
-                        function sendMessage(headers_obj, message, callback)
-                        {
-                            var email = '';
-                            for(var header in headers_obj)
-                                email += header += ": "+headers_obj[header]+"\r\n";
-                            email += "\r\n" + message;
-                            var sendRequest = gapi.client.gmail.users.messages.send({
-                                'userId': 'me',
-                                'resource': {
-                                    'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
-                                }
-                            });
-                            return sendRequest.execute(callback);
-                        }
-                    </script>
-                </div>
-
-
-            </div>
+            <!--</div>-->
         </div>
     </div>
 </div>

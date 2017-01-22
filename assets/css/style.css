@@ -255,9 +255,10 @@ h1::after {
 }
 
 #contact-sec .overlay {
-        background: rgba(0, 0, 0, 0.76);
-        min-height: 600px;
+    background: rgba(38, 57, 88, 0.89);
+    min-height: 400px;
     }
+
 
     #contact-sec h1 {
         color:#fff;
